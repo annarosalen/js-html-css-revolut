@@ -2,12 +2,15 @@ $(document).ready(function () {
 
 
 // aggiungere la classe active a dropdown quando clicco su li-drop
-  $(".li-drop").click(function(){
+  $(".li-drop").each(function(){
 
-    $(this).each(function(){
-      $(".dropdown").toggleClass("active");
+    $(this).click(function(){
+      var liActive = $(".dropdown");
+      liActive.removeClass("active");
+
+      $(this).find(".dropdown").addClass("active");
     });
-
+  
   });
 
 });
