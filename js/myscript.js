@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-// aggiungere la classe active a dropdown quando clicco su li-drop
+  // aggiungere la classe active a dropdown quando clicco su li-drop
   $(".li-drop").each(function(){
 
     $(this).click(function(){
@@ -10,7 +10,15 @@ $(document).ready(function () {
 
       $(this).find(".dropdown").addClass("active");
     });
-  
+
+
   });
+
+  // quando clicco fuori rimuovi classe active da dropdown
+  $(".dropdown").mouseleave(function(){
+    var liActive = $(".dropdown");
+    liActive.removeClass("active");
+  })
+
 
 });
