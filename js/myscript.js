@@ -14,7 +14,7 @@ $(document).ready(function () {
 
   });
 
-  // quando clicco fuori rimuovi classe active da dropdown
+  // quando mi sposto fuori rimuovi classe active da dropdown
   $(".dropdown").mouseleave(function(){
     var liActive = $(".dropdown");
     liActive.removeClass("active");
